@@ -58,6 +58,8 @@ if (change.operationType === "insert"){
   pusher.trigger("messages","inserted",{
     name: messageDetails.user,
     message: messageDetails.message,
+    timestamp: messageDetails.timestamp,
+    received: messageDetails.received
   })
 }else {
   console.log("error in pusher");
