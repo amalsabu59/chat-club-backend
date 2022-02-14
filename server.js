@@ -17,10 +17,10 @@ const port = process.env.PORT || 9000;
 //const Pusher = require("pusher");
 
 const pusher = new Pusher({
-  appId: "1342139",
-  key: "725a0d18aeab76a3b0c0",
-  secret: "d3ca5b842a19e26828ad",
-  cluster: "ap2",
+  appId: "",
+  key: "",
+  secret: "",
+  cluster: "",
   useTLS: true
 });
 
@@ -31,7 +31,7 @@ pusher.trigger("my-channel", "my-event", {
 app.use(express.json());
 app.use(cors())
 
-const connection_url = "mongodb+srv://admin:tDlSZ8ksrSJKNX8C@cluster0.efthy.mongodb.net/chathouse?retryWrites=true&w=majority";
+const connection_url = "mongodb+srv://`username`:`password`@cluster0.efthy.mongodb.net/chathouse?retryWrites=true&w=majority";
 
 mongoose.connect(connection_url, {
    
